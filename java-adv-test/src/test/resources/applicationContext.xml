@@ -18,4 +18,41 @@
 			<value>Hello from Spring, Vegas_Joshua</value>
 		</constructor-arg>
 	</bean>
+	
+	<bean id="passengerBean" class="fr.natsystem.examen.datamodel.Passenger">
+		<constructor-arg name="name">
+			<value>Vegas_Joshua</value>
+		</constructor-arg>
+		<property name="passengerClass">
+			<list>
+				<value>FIRST</value>
+				<value>SECOND</value>
+				<value>THIRD</value>
+				<value>NOCLASS</value>
+			</list>
+		</property>
+		<constructor-arg name="age">
+			<value>30.0</value>
+		</constructor-arg>
+		<property name="PassengerSex">
+			<list>
+				<value>MALE</value>
+				<value>FFEMALE</value>
+			</list>
+		</property>
+		<constructor-arg name="survived">
+			<value>true</value>
+		</constructor-arg>
+		
+	</bean>
+	
+	
+	<bean id="mainDS"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"></property>
+		<property name="username" value="test"></property>
+		<property name="password" value="test"></property>
+		<property name="driverClassName" value="org.h2.Driver"></property>
+	</bean>
+	
 </beans>
